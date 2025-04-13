@@ -17,6 +17,10 @@ a {
 /*////////HEADER////////*/
 
 .encabezado {
+    position: sticky;
+    top: 0;
+    background-color:#fec7d7 ;
+    z-index: 1000;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -128,8 +132,9 @@ main {
 }
 
 .img-beauty {
-    width: 300px;
-    height: 245px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 245px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-bottom: 10px;
@@ -176,8 +181,9 @@ main {
 }
 
 .img-ofertas {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-bottom: 10px;
@@ -203,8 +209,9 @@ main {
 }
 
 .img-regaleria {
-    width: 400px;
-    height: 350px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 350px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-bottom: 10px;
@@ -234,7 +241,7 @@ main {
 }
 
 .main-fragancias h2 {
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .grilla-perfumes-femeninos {
@@ -257,7 +264,7 @@ main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    text-align: justify;
+    justify-content: space-between;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -288,25 +295,20 @@ span {
 /*///////// PAGE MAQUILLAJE CON GRID///////*/
 
 .main-maquillajes {
-    background-color: #d9d4e7;
     margin-bottom: 10px;
-    display: grid;
-    grid-template-areas: 
-    "nav h2"
-    "nav h3"
-    "nav grilla-maquillajes";
-    grid-template-columns: 200px 1fr ;
-    grid-template-rows: 50px 50px auto;
-    gap: 10px;
+    background-color: #d9d4e7;
 }
 
 .main-maquillajes h2, h3{
-    grid-area: h2;
     margin-top: 10px;
 }
 
 .main-maquillajes h3{
-    grid-area: h3;
+    background-color: #0e172c;
+    width: 100%;
+    height: 50px;
+    color:#fffffe;
+    padding-top: 6px;
     text-align: center;
 }
 
@@ -319,7 +321,7 @@ span {
    margin: 40px;
 }
 
-.perfumes {
+.maquillajes {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -328,10 +330,10 @@ span {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.img-perfumes {
-    width: 100%;
-    max-width: 400px;
-    max-height: 400PX;
+.img-maq {
+    width: 60%;
+    max-width: 300px;
+    max-height: 300PX;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px4;
     margin-bottom: 15px;
@@ -350,7 +352,17 @@ span {
     font-weight: 600;
     font-style: italic;
 }
+.marca-m{
+    color:rgba(223, 129, 215, 0.22);
+}
 
+.frag-masc{
+    background-color: #0e172c;
+    width: 100%;
+    height: 50px;
+    color:#fffffe;
+    padding-top: 6px;
+}
 
 
 /*////////SECCION MEDIOS DE PAGO////////*/
@@ -393,7 +405,7 @@ span {
 
 .carousel-inner{
     grid-area: carrusel;
-    padding: 50px;
+    padding: 25px;
 }
 
 
@@ -472,9 +484,101 @@ footer {
     border-radius: 8px;
 }
 
+.iconowts{
+    position: fixed;
+    width: 56px;
+    bottom: 25px;
+    right: 20px;
+}
+
 /*////////FORMULARIO////////*/
 
 .formulario h3,
 h2 {
     text-align: center;
+}
+
+
+/* /////// MEDIAS QUERIES ///*/
+
+@media (max-width: 905px){
+
+   .mapa{
+    width: 200px;
+    height: 200px;
+   }
+
+}
+
+@media (max-width: 705px){
+   .contacto a, p{
+    font-size: small;
+   }
+   .nosotros a{
+    font-size: small;
+   }
+}
+
+@media (max-width: 655px){
+.encabezado{
+    flex-direction: column;
+}
+}
+
+@media (max-width: 630px){
+    .contacto{
+        margin-left: 18px;
+        padding: 5px;
+    }
+    .maps{
+        margin: 0;
+        padding: 5px;
+    }
+
+    .mapa{
+        margin-left: 50px;
+    }
+
+    .descripcion{
+        display: none;
+    }
+    .grilla-perfumes-femeninos, .grilla-perfumes-masculinos, .grilla-maquillajes{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .marca-m{
+        font-size: 15px ;
+    }
+  
+}
+
+@media (max-width: 465px){
+h2{
+    font-size: 16px;
+}
+.ofertas p, .regaleria p{
+    font-size: 13px;
+}
+.logo{
+    display: none;
+}
+.derechos p{
+    font-size: 8px;
+}
+.descuentos{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.video{
+    display: none;
+}
+
+.mapa{
+    margin-left: 30px;
+}
+
+.iconowts{
+    width: 40px ;
+}
 }

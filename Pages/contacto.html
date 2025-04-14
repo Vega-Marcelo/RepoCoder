@@ -65,25 +65,27 @@
     <main>
         <section class="formulario">
             <h2>Contactenos</h2>
-            <h3>Nuestros horarios de atención son de: Lunes a Viernes de 9 a 17 hs. Sabados de 9 a 12 hs.</h3>
-            <h3>Te estaremos brindando respuesta a la brevedad.</h3>
+            <h2>Nuestros horarios de atención son de: Lunes a Viernes de 9 a 17 hs. Sabados de 9 a 12 hs.</h2>
+            <h2>Te estaremos brindando respuesta a la brevedad.</h2>
             <form action="">
-                <fieldset>
-                    <legend>Datos de Contacto</legend>
+              <div class="formulario-contacto">
+              <fieldset> 
                     <label for="nombre">Ingrese su nombre:</label>
-                    <input type="text" id="nombre">
-
+                    <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example" id="nombre" required>
                     <label for="apellido">Ingrese su apellido:</label>
-                    <input type="text" id="apellido" required>
-
-                    <label for="correo">Ingrese su email:</label>
-                    <input type="email" id="correo">
-
-                    <label for="comentario">Consulta:</label>
-                    <textarea name="comentario" id="comentario"></textarea>
+                    <input class="form-control" type="text" placeholder="Apellido" aria-label="default input example" id="apellido" required>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Ingrese su email:</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Consulta:</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
                 </fieldset>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
+                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+                <button type="reset" class="btn btn-primary mb-3">Limpiar</button>
+              </div> 
             </form>
         </section>
     </main>

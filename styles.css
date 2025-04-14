@@ -493,11 +493,33 @@ footer {
 
 /*////////FORMULARIO////////*/
 
-.formulario h3,
-h2 {
-    text-align: center;
+fieldset{
+    width: 340px;
 }
 
+.formulario{
+    margin: 20px;
+}
+
+.formulario h2 {
+    text-align: center;
+    font-size:30px;
+}
+
+.formulario-contacto{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin:20px;
+}
+.btn{
+    background-color: #0e172c;
+}
+
+.btn:hover{
+    background-color: #fec7d7;
+    color:#0e172c
+}
 
 /* /////// MEDIAS QUERIES ///*/
 
@@ -550,7 +572,10 @@ h2 {
     .marca-m{
         font-size: 15px ;
     }
-  
+    .formulario h2{
+        font-size: 20px;
+
+    }
 }
 
 @media (max-width: 465px){
@@ -581,4 +606,9 @@ h2{
 .iconowts{
     width: 40px ;
 }
+
+fieldset{
+    width: 250px;
+}
+
 }
